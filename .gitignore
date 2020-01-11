@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/DockerTraining
+/packages
+**/website/bin
+**/website/obj
+*.user
