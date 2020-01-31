@@ -1,1 +1,1 @@
-# Sitecore-Docker-Training
+# Sitecore Docker Training

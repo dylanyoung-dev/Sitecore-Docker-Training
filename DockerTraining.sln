@@ -4,6 +4,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{E6C34A23-F49D-4FDB-A375-E33194186276}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+		docker-compose.yml = docker-compose.yml
+		publishsettingswebsitedebug.targets = publishsettingswebsitedebug.targets
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{273BAA5E-9F80-4BED-90DD-74F4280CA8CB}"
 EndProject
@@ -12,6 +18,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{A16348F6-C9A2-4FA2-ABB2-BA26EFC0B0FC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Training.Project.Demo", "src\Project\Demo\website\Training.Project.Demo.csproj", "{F342EF8E-FB60-41B6-8EAA-86237494D7F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{7F6C3F9B-77DA-4240-9558-52AB7081DA1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Training.Foundation.Serialization", "src\Foundation\Serialization\website\Training.Foundation.Serialization.csproj", "{75754D91-97ED-4496-98FC-EAAD29BBBF84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +33,18 @@ Global
 		{F342EF8E-FB60-41B6-8EAA-86237494D7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F342EF8E-FB60-41B6-8EAA-86237494D7F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F342EF8E-FB60-41B6-8EAA-86237494D7F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75754D91-97ED-4496-98FC-EAAD29BBBF84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75754D91-97ED-4496-98FC-EAAD29BBBF84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75754D91-97ED-4496-98FC-EAAD29BBBF84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75754D91-97ED-4496-98FC-EAAD29BBBF84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F342EF8E-FB60-41B6-8EAA-86237494D7F1} = {A16348F6-C9A2-4FA2-ABB2-BA26EFC0B0FC}
+		{7F6C3F9B-77DA-4240-9558-52AB7081DA1F} = {273BAA5E-9F80-4BED-90DD-74F4280CA8CB}
+		{75754D91-97ED-4496-98FC-EAAD29BBBF84} = {7F6C3F9B-77DA-4240-9558-52AB7081DA1F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {107A938A-9A8B-4271-A403-D79BC91E4BF7}
