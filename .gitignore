@@ -8,8 +8,8 @@
 **/website/obj
 *.user
 
-/data/*/**
-!/data/*/.gitkeep
-/deploy/*/**
-!/deploy/*/.gitkeep
-!/deploy/serialization
+/docker/data/*/**
+!/docker/data/*/.gitkeep
+/docker/deploy/*/**
+!/docker/deploy/*/.gitkeep
+!/docker/deploy/serialization
