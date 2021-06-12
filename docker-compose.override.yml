@@ -113,7 +113,6 @@ services:
         condition: service_started
     volumes:
       - ${HOST_LICENSE_FOLDER}:c:\license:ro
-      - ${LOCAL_DEPLOY_PATH}\horizon:C:\deploy
     labels:
       - "traefik.enable=true"
       - "traefik.http.middlewares.force-STS-Header.headers.forceSTSHeader=true"
