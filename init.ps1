@@ -102,4 +102,3 @@ Add-HostsEntry "id.$($HostName).localhost"
 Add-HostsEntry "hrz.$($HostName).localhost"
 
 Write-Host "Done!" -ForegroundColor Green
-SAVE TO CACHER
