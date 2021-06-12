@@ -1,9 +1,5 @@
 [CmdletBinding()]
 Param (
-    [Parameter(Mandatory = $true)]
-    [string]
-    [ValidateNotNullOrEmpty()]
-    $LicenseXmlPath,
 
     [string]
     $HostName = "training",
@@ -38,31 +34,12 @@ if (-not (Get-InstalledModule -Name SitecoreDockerTools -RequiredVersion $docker
 }
 Write-Host "Importing SitecoreDockerTools..." -ForegroundColor Green
 Import-Module SitecoreDockerTools -RequiredVersion $dockerToolsVersion
-Write-SitecoreDockerWelcome
 
 ###############################
 # Populate the environment file
 ###############################
 
 Write-Host "Populating required .env file variables..." -ForegroundColor Green
-
-# SITECORE_ADMIN_PASSWORD
-Set-EnvFileVariable "SITECORE_ADMIN_PASSWORD" -Value $SitecoreAdminPassword
-
-# SQL_SA_PASSWORD
-Set-EnvFileVariable "SQL_SA_PASSWORD" -Value $SqlSaPassword
-
-# CD_HOST
-Set-EnvFileVariable "CD_HOST" -Value "cd.$($HostName).localhost"
-
-# CM_HOST
-Set-EnvFileVariable "CM_HOST" -Value "cm.$($HostName).localhost"
-
-# ID_HOST
-Set-EnvFileVariable "ID_HOST" -Value "id.$($HostName).localhost"
-
-# HRZ_HOST
-Set-EnvFileVariable "HRZ_HOST" -Value "hrz.$($HostName).localhost"
 
 # REPORTING_API_KEY = random 64-128 chars
 Set-EnvFileVariable "REPORTING_API_KEY" -Value (Get-SitecoreRandomString 64 -DisallowSpecial)
@@ -83,8 +60,6 @@ Set-EnvFileVariable "SITECORE_ID_CERTIFICATE" -Value (Get-SitecoreCertificateAsB
 # SITECORE_ID_CERTIFICATE_PASSWORD
 Set-EnvFileVariable "SITECORE_ID_CERTIFICATE_PASSWORD" -Value $idCertPassword
 
-# SITECORE_LICENSE
-Set-EnvFileVariable "SITECORE_LICENSE" -Value (ConvertTo-CompressedBase64String -Path $LicenseXmlPath)
 
 ##################################
 # Configure TLS/HTTPS certificates

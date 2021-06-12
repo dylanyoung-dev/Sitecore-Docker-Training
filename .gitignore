@@ -13,3 +13,5 @@
 /docker/deploy/*/**
 !/docker/deploy/*/.gitkeep
 !/docker/deploy/serialization
+
+/docker/traefik/certs/*
