@@ -38,6 +38,7 @@ services:
       args:
         HRZ_IMAGE: ${SITECORE_DOCKER_MODULES_REGISTRY}horizon-integration-xp0-assets:2.26.0-1809
         SITECRON_IMAGE: sitecoremaster/sitecore-sitecron:3.2.0-10.1-1809
+        HEADLESS_IMAGE: ${SITECORE_DOCKER_MODULES_REGISTRY}sitecore-headless-services-xp1-assets:16.0.0-1809
         BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xp0-mssql:${SITECORE_VERSION}
     volumes:
       - ${LOCAL_DATA_PATH}\mssql:c:\data
@@ -69,6 +70,7 @@ services:
         BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xp0-cm:${SITECORE_VERSION}
         TOOLING_IMAGE: ${TOOLS_IMAGE}
         SITECRON_IMAGE: sitecoremaster/sitecore-sitecron:3.2.0-10.1-1809
+        HEADLESS_IMAGE: ${SITECORE_DOCKER_MODULES_REGISTRY}sitecore-headless-services-xp1-assets:16.0.0-1809
         HRZ_IMAGE: ${SITECORE_DOCKER_MODULES_REGISTRY}horizon-integration-xp0-assets:2.26.0-1809
         #SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
     depends_on:
